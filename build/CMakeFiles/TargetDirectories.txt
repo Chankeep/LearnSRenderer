@@ -1,0 +1,3 @@
+D:/CODE/learnSRender/build/CMakeFiles/tinyrenderer.dir
+D:/CODE/learnSRender/build/CMakeFiles/ALL_BUILD.dir
+D:/CODE/learnSRender/build/CMakeFiles/ZERO_CHECK.dir
