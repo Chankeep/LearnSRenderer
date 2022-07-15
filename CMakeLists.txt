@@ -1,20 +1,11 @@
-cmake_minimum_required (VERSION 2.8)
-project(tinyrenderer)
-
+cmake_minimum_required (VERSION 3.0.0)#规定cmake的最低版本要求
+project(tinyRenderer)#项目的名称，不一定和你的文件夹名称一
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-find_package(OpenMP)
-if(OPENMP_FOUND)
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
-endif()
-
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
-endif()
-
-file(GLOB SOURCES *.h *.cpp)
-
-add_executable(${PROJECT_NAME} ${SOURCES})
+set(CMAKE_C_COMPILER "g++")
+set(CMAKE_CXX_COMPILER "g++")
+ 
+include_directories(${PROJECT_SOURCE_DIR}/source)#添加头文件的搜索路径
+aux_source_directory(./source SrcFiles)#将源文件列表写在变量SrcFiles中
+set(EXECUTABLE_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/image)#设置可执行文件输出路径
+add_executable(tinyRenderer ${SrcFiles})#设置可执行文件的名称，make之后bin目录下出现main.exe

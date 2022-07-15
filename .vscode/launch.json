@@ -1,7 +1,30 @@
 {
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "name": "(gdb) 启动",   //调试名称
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/image/tinyRenderer.exe",// 将要进行调试的程序的路径  
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/image", // 调试程序时的工作目录，一般为${workspaceFolder}即代码所在目录  
+            "environment": [],
+            "externalConsole": true,   //调试是否用外控制台，就是用黑框框，不用黑框框就是终端下调试 
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\Qt\\Tools\\mingw1120_64\\bin\\gdb.exe", // miDebugger的路径，注意这里要与MinGw的路径对应，填你自己的  
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
 }
