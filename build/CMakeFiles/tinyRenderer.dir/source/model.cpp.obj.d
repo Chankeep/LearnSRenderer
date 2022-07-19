@@ -148,6 +148,7 @@ CMakeFiles/tinyRenderer.dir/source/model.cpp.obj: \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
  D:\CODE\LearnSRenderer\source\model.h \
+ D:\CODE\LearnSRenderer\source\tgaimage.h \
  D:\CODE\LearnSRenderer\source\geometry.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
  D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/math.h \
