@@ -1,100 +1,87 @@
 #include <vector>
 #include <iostream>
-#include <vector>
-#include <limits>
-#include "geometry.h"
+
 #include "tgaimage.h"
 #include "model.h"
+#include "geometry.h"
+#include "our_gl.h"
+
 Model *model = NULL;
-TGAImage diffuse(1024, 1024, TGAImage::RGB);
-const int width = 1280;
-const int height = 1024;
+const int width = 800;
+const int height = 800;
 
-Vec3f barycentric(Vec3f *pts, Vec3f P)
+Vec3f light_dir(1, 1, 1);
+Vec3f eye(1, 1, 3);
+Vec3f center(0, 0, 0);
+Vec3f up(0, 1, 0);
+
+class GouraudShader : public IShader
 {
-	Vec3f u = Vec3f(pts[2].x - pts[0].x, pts[1].x - pts[0].x, pts[0].x - P.x) ^ Vec3f(pts[2].y - pts[0].y, pts[1].y - pts[0].y, pts[0].y - P.y);
-	/* `pts` and `P` has integer value as coordinates
-	   so `abs(u[2])` < 1 means `u[2]` is 0, that means
-	   triangle is degenerate, in this case return something with negative coordinates */
-	if (std::abs(u.z) < 1)
-		return Vec3f(-1, 1, 1);
-	return Vec3f(1.f - (u.x + u.y) / u.z, u.y / u.z, u.x / u.z);
-}
+public:
+    Vec3f varying_intensity; // written by vertex shader, read by fragment shader
+    mat<2, 3, float> varying_uv;
+    mat<4, 4, float> uniform_M = Projection * ModelView;
+    mat<4, 4, float> uniform_MIT = uniform_M.invert_transpose();
 
-void triangle(Vec3f *pts, Vec2f *uv, float *z_buffer, TGAImage &image, TGAColor color)
-{
-	Vec2i bboxmin(image.get_width() - 1, image.get_height() - 1);
-	Vec2i bboxmax(0, 0);
-	Vec2i clamp(image.get_width() - 1, image.get_height() - 1);
-	for (int i = 0; i < 3; i++)
-	{
-		bboxmin.x = std::max(0, std::min(bboxmin.x, (int)pts[i].x));
-		bboxmin.y = std::max(0, std::min(bboxmin.y, (int)pts[i].y));
+    virtual Vec4f vertex(int iface, int nthvert)
+    {
+        varying_uv.set_col(nthvert, model->uv(iface, nthvert));
+        Vec4f gl_Vertex = embed<4>(model->vert(iface, nthvert));
+        gl_Vertex = Viewport * Projection * ModelView * gl_Vertex;
+        return gl_Vertex;
+    }
 
-		bboxmax.x = std::min(clamp.x, std::max(bboxmax.x, (int)pts[i].x));
-		bboxmax.y = std::min(clamp.y, std::max(bboxmax.y, (int)pts[i].y));
-		uv[i].u *= 1024;
-		uv[i].v *= 1024;
-	}
-	Vec3f P;
-	for (P.x = bboxmin.x; P.x <= bboxmax.x; P.x++)
-	{
-		for (P.y = bboxmin.y; P.y <= bboxmax.y; P.y++)
-		{
-			Vec3f bc_screen = barycentric(pts, P);
-			if (bc_screen.x < 0 || bc_screen.y < 0 || bc_screen.z < 0)
-				continue;
-			P.z = 0;
-			Vec2f uv_pos;
-			for (int i = 0; i < 3; i++)
-			{
-				P.z += pts[i].z * bc_screen.raw[i];
-				uv_pos.u += uv[i].u * bc_screen.raw[i];
-				uv_pos.v += uv[i].v * bc_screen.raw[i];
-			}
-			if (z_buffer[int(P.x + P.y * width)] < P.z)
-			{
-				z_buffer[int(P.x + P.y * width)] = P.z;
-				image.set(P.x, P.y, diffuse.get(uv_pos.u, uv_pos.v) * color);
-			}
-		}
-	}
-}
+    virtual bool fragment(Vec3f bar, TGAColor &color)
+    {
+        Vec2f uv = varying_uv * bar;
+        Vec3f n = proj<3>(uniform_MIT * embed<4>(model->normal(uv))).normalize();
+        Vec3f l = proj<3>(uniform_M * embed<4>(light_dir)).normalize();
+        Vec3f r = (n*(n*l*2.f) - l).normalize();
+        Vec3f h = (eye + l);
+        float spec = pow(std::max(0.f, r.z), model->specular(uv));
+        float diff = std::max(0.f, n*l);
+        TGAColor c = model->diffuse(uv);
+        color = c;
+        for(int i=0; i<3;i++) color[i] = std::min<float>(5 + c[i]*(diff + .6*spec), 255);
+        return false; // no, we do not discard this pixel
+    }
+};
 
 int main(int argc, char **argv)
 {
-	model = new Model("../obj/african_head.obj");
-	TGAImage frame(width, height, TGAImage::RGB);
-	diffuse.read_tga_file("../image//african_head_diffuse.tga");
-	// Vec2i pts[3] = {Vec2i(10,10), Vec2i(100, 30), Vec2i(190, 160)};
-	// triangle(pts, frame, TGAColor(255, 0, 0, 255));
-	Vec3f light_Dir(0, 0, -1);
-	float *z_buffer = new float[width * height];
-	for (int i = 0; i < width * height; i++)
-		z_buffer[i] = std::numeric_limits<float>::min();
-	for (int i = 0; i < model->nfaces(); i++)
-	{
-		Vec3f screen_pos[3];
-		Vec3f world_Pos[3];
-		Vec2f uv[3];
-		std::vector<int> face = model->face(i);
-		std::vector<int> tex = model->tex(i);
-		for (int j = 0; j < 3; j++)
-		{
-			Vec3f pos = model->vert(face[j]);
-			screen_pos[j] = Vec3f((pos.x + 1.) * width / 2. + .5, (pos.y + 1.) * height / 2. + .5, (pos.z + 1.) / 2);
-			world_Pos[j] = pos;
-			uv[j] = model->uv(tex[j]);
-		}
-		Vec3f world_normal = (world_Pos[2] - world_Pos[0]) ^ (world_Pos[1] - world_Pos[0]);
-		world_normal.normalize();
-		float intensity = world_normal * light_Dir;
-		if (intensity > 0)
-			triangle(screen_pos, uv, z_buffer, frame, TGAColor(intensity * 255, intensity * 255, intensity * 255, 255));
-	}
-	frame.flip_vertically(); // to place the origin in the bottom left corner of the image
-	frame.write_tga_file("framebuffer.tga");
-	delete model;
-	delete[] z_buffer;
-	return 0;
+    if (2 == argc)
+    {
+        model = new Model(argv[1]);
+    }
+    else
+    {
+        model = new Model("../obj/african_head/african_head.obj");
+    }
+
+    lookat(eye, center, up);
+    viewport(width / 8, height / 8, width * 3 / 4, height * 3 / 4);
+    projection(-1.f / (eye - center).norm());
+    light_dir.normalize();
+
+    TGAImage image(width, height, TGAImage::RGB);
+    TGAImage zbuffer(width, height, TGAImage::GRAYSCALE);
+
+    GouraudShader shader;
+    for (int i = 0; i < model->nfaces(); i++)
+    {
+        Vec4f screen_coords[3];
+        for (int j = 0; j < 3; j++)
+        {
+            screen_coords[j] = shader.vertex(i, j);
+        }
+        triangle(screen_coords, shader, image, zbuffer);
+    }
+
+    image.flip_vertically(); // to place the origin in the bottom left corner of the image
+    zbuffer.flip_vertically();
+    image.write_tga_file("output.tga");
+    zbuffer.write_tga_file("zbuffer.tga");
+
+    delete model;
+    return 0;
 }

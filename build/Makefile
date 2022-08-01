@@ -128,6 +128,30 @@ tinyRenderer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/build
 .PHONY : tinyRenderer/fast
 
+source/geometry.obj: source/geometry.cpp.obj
+.PHONY : source/geometry.obj
+
+# target to build an object file
+source/geometry.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/geometry.cpp.obj
+.PHONY : source/geometry.cpp.obj
+
+source/geometry.i: source/geometry.cpp.i
+.PHONY : source/geometry.i
+
+# target to preprocess a source file
+source/geometry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/geometry.cpp.i
+.PHONY : source/geometry.cpp.i
+
+source/geometry.s: source/geometry.cpp.s
+.PHONY : source/geometry.s
+
+# target to generate assembly for a file
+source/geometry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/geometry.cpp.s
+.PHONY : source/geometry.cpp.s
+
 source/main.obj: source/main.cpp.obj
 .PHONY : source/main.obj
 
@@ -176,6 +200,30 @@ source/model.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/model.cpp.s
 .PHONY : source/model.cpp.s
 
+source/our_gl.obj: source/our_gl.cpp.obj
+.PHONY : source/our_gl.obj
+
+# target to build an object file
+source/our_gl.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/our_gl.cpp.obj
+.PHONY : source/our_gl.cpp.obj
+
+source/our_gl.i: source/our_gl.cpp.i
+.PHONY : source/our_gl.i
+
+# target to preprocess a source file
+source/our_gl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/our_gl.cpp.i
+.PHONY : source/our_gl.cpp.i
+
+source/our_gl.s: source/our_gl.cpp.s
+.PHONY : source/our_gl.s
+
+# target to generate assembly for a file
+source/our_gl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/our_gl.cpp.s
+.PHONY : source/our_gl.cpp.s
+
 source/tgaimage.obj: source/tgaimage.cpp.obj
 .PHONY : source/tgaimage.obj
 
@@ -209,12 +257,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... tinyRenderer
+	@echo ... source/geometry.obj
+	@echo ... source/geometry.i
+	@echo ... source/geometry.s
 	@echo ... source/main.obj
 	@echo ... source/main.i
 	@echo ... source/main.s
 	@echo ... source/model.obj
 	@echo ... source/model.i
 	@echo ... source/model.s
+	@echo ... source/our_gl.obj
+	@echo ... source/our_gl.i
+	@echo ... source/our_gl.s
 	@echo ... source/tgaimage.obj
 	@echo ... source/tgaimage.i
 	@echo ... source/tgaimage.s

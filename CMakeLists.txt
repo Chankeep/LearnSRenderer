@@ -4,7 +4,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_COMPILER "g++")
 set(CMAKE_CXX_COMPILER "g++")
- 
+
+file(GLOB SOURCES *.h *.cpp)
 include_directories(${PROJECT_SOURCE_DIR}/source)#添加头文件的搜索路径
 aux_source_directory(./source SrcFiles)#将源文件列表写在变量SrcFiles中
 set(EXECUTABLE_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/image)#设置可执行文件输出路径
