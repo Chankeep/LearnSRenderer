@@ -1,3 +1,3 @@
-D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\tinyRenderer.dir/objects.a
-D:\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\tinyRenderer.dir/objects.a @CMakeFiles\tinyRenderer.dir\objects1.rsp
-g++ -g -Wl,--whole-archive CMakeFiles\tinyRenderer.dir/objects.a -Wl,--no-whole-archive -o ..\image\tinyRenderer.exe -Wl,--out-implib,..\image\libtinyRenderer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tinyRenderer.dir\linklibs.rsp
+D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\tinyrenderer.dir/objects.a
+D:\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\tinyrenderer.dir/objects.a @CMakeFiles\tinyrenderer.dir\objects1.rsp
+D:\Qt\Tools\mingw1120_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\tinyrenderer.dir/objects.a -Wl,--no-whole-archive -o ..\image\tinyrenderer.exe -Wl,--out-implib,..\image\libtinyrenderer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tinyrenderer.dir\linklibs.rsp

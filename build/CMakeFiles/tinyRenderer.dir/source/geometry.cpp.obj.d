@@ -1,4 +1,4 @@
-CMakeFiles/tinyRenderer.dir/source/geometry.cpp.obj: \
+CMakeFiles/tinyrenderer.dir/source/geometry.cpp.obj: \
  D:\CODE\LearnSRenderer\source\geometry.cpp \
  D:\CODE\LearnSRenderer\source\geometry.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \

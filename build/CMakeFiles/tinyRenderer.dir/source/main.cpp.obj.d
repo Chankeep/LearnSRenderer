@@ -1,4 +1,4 @@
-CMakeFiles/tinyRenderer.dir/source/main.cpp.obj: \
+CMakeFiles/tinyrenderer.dir/source/main.cpp.obj: \
  D:\CODE\LearnSRenderer\source\main.cpp \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algobase.h \

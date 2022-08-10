@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = D:\CODE\LearnSRenderer\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/tinyRenderer.dir/all
+all: CMakeFiles/tinyrenderer.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/tinyRenderer.dir/clean
+clean: CMakeFiles/tinyrenderer.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tinyRenderer.dir
+# Target rules for target CMakeFiles/tinyrenderer.dir
 
 # All Build rule for target.
-CMakeFiles/tinyRenderer.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CODE\LearnSRenderer\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target tinyRenderer"
-.PHONY : CMakeFiles/tinyRenderer.dir/all
+CMakeFiles/tinyrenderer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\CODE\LearnSRenderer\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target tinyrenderer"
+.PHONY : CMakeFiles/tinyrenderer.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/tinyRenderer.dir/rule: cmake_check_build_system
+CMakeFiles/tinyrenderer.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\CODE\LearnSRenderer\build\CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tinyRenderer.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tinyrenderer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\CODE\LearnSRenderer\build\CMakeFiles 0
-.PHONY : CMakeFiles/tinyRenderer.dir/rule
+.PHONY : CMakeFiles/tinyrenderer.dir/rule
 
 # Convenience name for target.
-tinyRenderer: CMakeFiles/tinyRenderer.dir/rule
-.PHONY : tinyRenderer
+tinyrenderer: CMakeFiles/tinyrenderer.dir/rule
+.PHONY : tinyrenderer
 
 # clean rule for target.
-CMakeFiles/tinyRenderer.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/clean
-.PHONY : CMakeFiles/tinyRenderer.dir/clean
+CMakeFiles/tinyrenderer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/clean
+.PHONY : CMakeFiles/tinyrenderer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

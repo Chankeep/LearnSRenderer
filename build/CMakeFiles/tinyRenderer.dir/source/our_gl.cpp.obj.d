@@ -1,4 +1,4 @@
-CMakeFiles/tinyRenderer.dir/source/our_gl.cpp.obj: \
+CMakeFiles/tinyrenderer.dir/source/our_gl.cpp.obj: \
  D:\CODE\LearnSRenderer\source\our_gl.cpp \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \

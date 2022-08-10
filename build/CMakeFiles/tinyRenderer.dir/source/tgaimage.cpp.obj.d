@@ -1,4 +1,4 @@
-CMakeFiles/tinyRenderer.dir/source/tgaimage.cpp.obj: \
+CMakeFiles/tinyrenderer.dir/source/tgaimage.cpp.obj: \
  D:\CODE\LearnSRenderer\source\tgaimage.cpp \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \

@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named tinyRenderer
+# Target rules for targets named tinyrenderer
 
 # Build rule for target.
-tinyRenderer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tinyRenderer
-.PHONY : tinyRenderer
+tinyrenderer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tinyrenderer
+.PHONY : tinyrenderer
 
 # fast build rule for target.
-tinyRenderer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/build
-.PHONY : tinyRenderer/fast
+tinyrenderer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/build
+.PHONY : tinyrenderer/fast
 
 source/geometry.obj: source/geometry.cpp.obj
 .PHONY : source/geometry.obj
 
 # target to build an object file
 source/geometry.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/geometry.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/geometry.cpp.obj
 .PHONY : source/geometry.cpp.obj
 
 source/geometry.i: source/geometry.cpp.i
@@ -141,7 +141,7 @@ source/geometry.i: source/geometry.cpp.i
 
 # target to preprocess a source file
 source/geometry.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/geometry.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/geometry.cpp.i
 .PHONY : source/geometry.cpp.i
 
 source/geometry.s: source/geometry.cpp.s
@@ -149,7 +149,7 @@ source/geometry.s: source/geometry.cpp.s
 
 # target to generate assembly for a file
 source/geometry.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/geometry.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/geometry.cpp.s
 .PHONY : source/geometry.cpp.s
 
 source/main.obj: source/main.cpp.obj
@@ -157,7 +157,7 @@ source/main.obj: source/main.cpp.obj
 
 # target to build an object file
 source/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/main.cpp.obj
 .PHONY : source/main.cpp.obj
 
 source/main.i: source/main.cpp.i
@@ -165,7 +165,7 @@ source/main.i: source/main.cpp.i
 
 # target to preprocess a source file
 source/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/main.cpp.i
 .PHONY : source/main.cpp.i
 
 source/main.s: source/main.cpp.s
@@ -173,7 +173,7 @@ source/main.s: source/main.cpp.s
 
 # target to generate assembly for a file
 source/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/main.cpp.s
 .PHONY : source/main.cpp.s
 
 source/model.obj: source/model.cpp.obj
@@ -181,7 +181,7 @@ source/model.obj: source/model.cpp.obj
 
 # target to build an object file
 source/model.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/model.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/model.cpp.obj
 .PHONY : source/model.cpp.obj
 
 source/model.i: source/model.cpp.i
@@ -189,7 +189,7 @@ source/model.i: source/model.cpp.i
 
 # target to preprocess a source file
 source/model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/model.cpp.i
 .PHONY : source/model.cpp.i
 
 source/model.s: source/model.cpp.s
@@ -197,7 +197,7 @@ source/model.s: source/model.cpp.s
 
 # target to generate assembly for a file
 source/model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/model.cpp.s
 .PHONY : source/model.cpp.s
 
 source/our_gl.obj: source/our_gl.cpp.obj
@@ -205,7 +205,7 @@ source/our_gl.obj: source/our_gl.cpp.obj
 
 # target to build an object file
 source/our_gl.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/our_gl.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/our_gl.cpp.obj
 .PHONY : source/our_gl.cpp.obj
 
 source/our_gl.i: source/our_gl.cpp.i
@@ -213,7 +213,7 @@ source/our_gl.i: source/our_gl.cpp.i
 
 # target to preprocess a source file
 source/our_gl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/our_gl.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/our_gl.cpp.i
 .PHONY : source/our_gl.cpp.i
 
 source/our_gl.s: source/our_gl.cpp.s
@@ -221,7 +221,7 @@ source/our_gl.s: source/our_gl.cpp.s
 
 # target to generate assembly for a file
 source/our_gl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/our_gl.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/our_gl.cpp.s
 .PHONY : source/our_gl.cpp.s
 
 source/tgaimage.obj: source/tgaimage.cpp.obj
@@ -229,7 +229,7 @@ source/tgaimage.obj: source/tgaimage.cpp.obj
 
 # target to build an object file
 source/tgaimage.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/tgaimage.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/tgaimage.cpp.obj
 .PHONY : source/tgaimage.cpp.obj
 
 source/tgaimage.i: source/tgaimage.cpp.i
@@ -237,7 +237,7 @@ source/tgaimage.i: source/tgaimage.cpp.i
 
 # target to preprocess a source file
 source/tgaimage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/tgaimage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/tgaimage.cpp.i
 .PHONY : source/tgaimage.cpp.i
 
 source/tgaimage.s: source/tgaimage.cpp.s
@@ -245,7 +245,7 @@ source/tgaimage.s: source/tgaimage.cpp.s
 
 # target to generate assembly for a file
 source/tgaimage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyRenderer.dir\build.make CMakeFiles/tinyRenderer.dir/source/tgaimage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyrenderer.dir\build.make CMakeFiles/tinyrenderer.dir/source/tgaimage.cpp.s
 .PHONY : source/tgaimage.cpp.s
 
 # Help Target
@@ -256,7 +256,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... tinyRenderer
+	@echo ... tinyrenderer
 	@echo ... source/geometry.obj
 	@echo ... source/geometry.i
 	@echo ... source/geometry.s

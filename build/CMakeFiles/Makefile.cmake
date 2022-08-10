@@ -25,6 +25,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/GNU-C.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Compiler/GNU.cmake"
+  "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+  "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/FindPackageMessage.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -33,6 +35,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows-windres.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/Windows.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake"
+  "D:/Tools/OpenCV/OpenCVConfig-version.cmake"
+  "D:/Tools/OpenCV/OpenCVConfig.cmake"
+  "D:/Tools/OpenCV/x64/mingw/lib/OpenCVConfig.cmake"
+  "D:/Tools/OpenCV/x64/mingw/lib/OpenCVModules-release.cmake"
+  "D:/Tools/OpenCV/x64/mingw/lib/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:
@@ -48,5 +55,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/tinyRenderer.dir/DependInfo.cmake"
+  "CMakeFiles/tinyrenderer.dir/DependInfo.cmake"
   )

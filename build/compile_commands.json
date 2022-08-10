@@ -1,27 +1,27 @@
 [
 {
   "directory": "D:/CODE/LearnSRenderer/build",
-  "command": "g++  @CMakeFiles/tinyRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyRenderer.dir\\source\\geometry.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\geometry.cpp",
+  "command": "D:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe  @CMakeFiles/tinyrenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyrenderer.dir\\source\\geometry.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\geometry.cpp",
   "file": "D:/CODE/LearnSRenderer/source/geometry.cpp"
 },
 {
   "directory": "D:/CODE/LearnSRenderer/build",
-  "command": "g++  @CMakeFiles/tinyRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyRenderer.dir\\source\\main.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\main.cpp",
+  "command": "D:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe  @CMakeFiles/tinyrenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyrenderer.dir\\source\\main.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\main.cpp",
   "file": "D:/CODE/LearnSRenderer/source/main.cpp"
 },
 {
   "directory": "D:/CODE/LearnSRenderer/build",
-  "command": "g++  @CMakeFiles/tinyRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyRenderer.dir\\source\\model.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\model.cpp",
+  "command": "D:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe  @CMakeFiles/tinyrenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyrenderer.dir\\source\\model.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\model.cpp",
   "file": "D:/CODE/LearnSRenderer/source/model.cpp"
 },
 {
   "directory": "D:/CODE/LearnSRenderer/build",
-  "command": "g++  @CMakeFiles/tinyRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyRenderer.dir\\source\\our_gl.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\our_gl.cpp",
+  "command": "D:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe  @CMakeFiles/tinyrenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyrenderer.dir\\source\\our_gl.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\our_gl.cpp",
   "file": "D:/CODE/LearnSRenderer/source/our_gl.cpp"
 },
 {
   "directory": "D:/CODE/LearnSRenderer/build",
-  "command": "g++  @CMakeFiles/tinyRenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyRenderer.dir\\source\\tgaimage.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\tgaimage.cpp",
+  "command": "D:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe  @CMakeFiles/tinyrenderer.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\tinyrenderer.dir\\source\\tgaimage.cpp.obj -c D:\\CODE\\LearnSRenderer\\source\\tgaimage.cpp",
   "file": "D:/CODE/LearnSRenderer/source/tgaimage.cpp"
 }
 ]

@@ -4,7 +4,10 @@
             "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/source/"
+                "${workspaceFolder}/source/",
+                "D:/Tools/Eigen3/include/eigen3",
+                "D:/Tools/OpenCV/include",
+                "D:/Tools/OpenCV/include/opencv2"
             ],
             "defines": [
                 "_DEBUG",
