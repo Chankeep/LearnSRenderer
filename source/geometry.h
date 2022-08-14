@@ -45,6 +45,7 @@ struct vec<2, T>
         assert(i < 2);
         return i <= 0 ? x : y;
     }
+    float norm() { return std::sqrt(x * x + y * y); }
     const T &operator[](const size_t i) const
     {
         assert(i < 2);

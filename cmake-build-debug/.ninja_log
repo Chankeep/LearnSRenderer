@@ -1,0 +1,8 @@
+# ninja log v5
+0	655	6819225697288813	CMakeFiles/tinyrenderer.dir/source/geometry.cpp.obj	67c77475a5904cfd
+45	711	6819225698038964	CMakeFiles/tinyrenderer.dir/source/tgaimage.cpp.obj	35502fdd42cd5fb6
+59	748	6819225698409041	CMakeFiles/tinyrenderer.dir/source/our_gl.cpp.obj	689c3b14c4c66e9a
+14	810	6819225698909164	CMakeFiles/tinyrenderer.dir/source/main.cpp.obj	5559edad307c7eb6
+31	1022	6819225701149647	CMakeFiles/tinyrenderer.dir/source/model.cpp.obj	eeb1b24dcc049a62
+1022	1275	6819225703410148	../image/tinyrenderer.exe	c5a28b6be200855b
+4	263	6819225960023191	../image/tinyrenderer.exe	c5a28b6be200855b

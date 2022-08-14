@@ -1,0 +1,22 @@
+D:\Tools\Jetbrains\apps\CLion\ch-0\222.3345.126\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/Tools/Jetbrains/apps/CLion/ch-0/222.3345.126/bin/ninja/win/ninja.exe -G Ninja -S D:\CODE\LearnSRenderer -B D:\CODE\LearnSRenderer\cmake-build-debug
+-- The C compiler identification is GNU 11.2.0
+-- The CXX compiler identification is GNU 11.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: D:/Tools/Jetbrains/apps/CLion/ch-0/222.3345.126/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: D:/Tools/Jetbrains/apps/CLion/ch-0/222.3345.126/bin/mingw/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- OpenCV ARCH: x64
+-- OpenCV RUNTIME: mingw
+-- OpenCV STATIC: OFF
+-- Found OpenCV: D:/Tools/OpenCV (found version "4.5.5") 
+-- Found OpenCV 4.5.5 in D:/Tools/OpenCV/x64/mingw/lib
+-- You might need to add D:\Tools\OpenCV\x64\mingw\bin to your PATH to be able to run your applications.
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/CODE/LearnSRenderer/cmake-build-debug

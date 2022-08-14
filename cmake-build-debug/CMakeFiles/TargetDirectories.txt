@@ -1,0 +1,3 @@
+D:/CODE/LearnSRenderer/cmake-build-debug/CMakeFiles/tinyrenderer.dir
+D:/CODE/LearnSRenderer/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CODE/LearnSRenderer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
